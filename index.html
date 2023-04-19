@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio - Lewis Patterson</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bb5073b014.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -33,8 +34,109 @@
                     <img src="images/about.jpeg">
                 </div>
                 <div class="about-details">
-                    <h1>About Me</h1>
+                    <h1 class="section-heading">Quick Summary</h1>
+                    <div class="about-tabs">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>App Dev</span><br>C#, Java, Python</li>
+                            <li><span>Web</span><br>HTML, CSS, JavaScript</li>
+                            <li><span>Databases</span><br>SQL, Apache Derby</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>MSc Computing</span><br>C#, Java, Python</li>
+                            <li><span>BSc Computing</span><br>HTML, CSS, JavaScript</li>
+                            <li><span>Foundation Degree in Software Development</span><br>SQL, Apache Derby</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>MIS - Intern Software Developer</span><br>C#, Java, Python</li>
+                            <li><span>Web</span><br>HTML, CSS, JavaScript</li>
+                            <li><span>Databases</span><br>SQL, Apache Derby</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="abilities">
+        <div class="container">
+            <h1 class="section-heading">What I can do for you?</h1>
+            <div class="abilities-list">
+                <div>
+                    <h2>Application Design</h2>
+                    <i class="fa-solid fa-code fa-bounce a-head" style="color: #ffffff;"></i>
+                    <p>I can build and have built many desktop applications for varying purposes and sizes.</p>
+                    <a href="#">More Details</a>
+                </div>
+                <div>
+                    <h2>Web Design</h2>
+                    <i class="fa-solid fa-wifi fa-bounce a-head" style="color: #ffffff;"></i>
+                    <p>I can build and have built many desktop applications for varying purposes and sizes.</p>
+                    <a href="#">More Details</a>
+                </div>
+                <div>
+                    <h2>Database Design</h2>
+                    <i class="fa-solid fa-database fa-bounce a-head" style="color: #ffffff;"></i>
+                    <p>I can build and have built many desktop applications for varying purposes and sizes.</p>
+                    <a href="#">More Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="section-heading">My Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="images/MR1.PNG">
+                    <div class="layer">
+                        <h3>Runner Game</h3>
+                        <p>2D Runner game created in Python using python</p>
+                        <a href="#"><i class="fa-solid fa-link" style="color: #ff03ea;"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/VM2.PNG">
+                    <div class="layer">
+                        <h3>Vending Machine</h3>
+                        <p>Desktop virtual vending machine application made with C#</p>
+                        <a href="#"><i class="fa-solid fa-link" style="color: #ff03ea;"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/RF1.PNG">
+                    <div class="layer">
+                        <h3>Recipe Filter</h3>
+                        <p>Desktop recipe filter and intake tracker application made with C# & SQL</p>
+                        <a href="#"><i class="fa-solid fa-link" style="color: #ff03ea;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">View more</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row-contact">
+                <div class="contact-links">
+                    <h1 class="section-heading">Contact Me</h1>
+                    <p>lewispatterson90@gmail.com</p>
+                    <p>07493 364825</p>
+                    <div class="link-icons">
+                        <a href=""><i class="fa-brands fa-github" style="color: #7f2f78;"></i></a>
+                    </div>
+                </div>
+                <div class="contact-msg"></div>
             </div>
         </div>
     </div>
@@ -42,7 +144,23 @@
 
 
 
+<script>
 
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tab){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tab).classList.add("active-tab");
+    }
+</script>
 
 </body>
 </html>
