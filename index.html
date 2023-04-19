@@ -13,13 +13,15 @@
         <div class="container">
             <nav>
                 <a href = "#" class="logo">My Portfolio</a>
-                <ul>
+                <ul id="nav-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark menu" onclick="closemenu()"style="color: #170129;"></i>
                 </ul>
+                <i class="fa-solid fa-bars menu" onclick="openmenu()" style="color: #ff0080;"></i>
             </nav>
             <div class="header-text">
                 <h1>Hi, I'm <span>Lewis Patterson</span><br>A graduate developer currently looking for work in the industry.</h1>
@@ -128,17 +130,30 @@
     <div id="contact">
         <div class="container">
             <div class="row-contact">
-                <div class="contact-links">
+                <div class="contact-details">
                     <h1 class="section-heading">Contact Me</h1>
-                    <p>lewispatterson90@gmail.com</p>
-                    <p>07493 364825</p>
+                    <p><i class="fa-solid fa-envelope"></i>lewispatterson90@gmail.com</p>
+                    <p><i class="fa-solid fa-mobile-screen-button"></i>07493 364825</p>
                     <div class="link-icons">
-                        <a href=""><i class="fa-brands fa-github" style="color: #7f2f78;"></i></a>
+                        <a href="https://github.com/lewis-patt3rson" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/lewis-patterson-021474175/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
+                    <a href="files/CV_Lewis_Patterson.pdf" download class="btn btncon">Download CV</a>
                 </div>
-                <div class="contact-msg"></div>
+                <div class="contact-msg">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="7" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btncon">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="web-info">
+        <P><i class="fa-solid fa-gear fa-spin" style="color: #ff0080;"></i>Created by Lewis Patterson, the history of this site's development is available on GitHub.</P>
     </div>
 
 
@@ -160,6 +175,19 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tab).classList.add("active-tab");
     }
+</script>
+
+<script>
+
+    var navmenu = document.getElementById("nav-menu");
+
+    function openmenu(){
+        navmenu.style.right = "0";
+    }
+    function closemenu(){
+        navmenu.style.right = "-200px";
+    }
+
 </script>
 
 </body>
