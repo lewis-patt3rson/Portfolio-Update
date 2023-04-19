@@ -76,7 +76,7 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 28px;
     padding: 18px;
     text-align: center;
@@ -101,7 +101,8 @@ nav ul li a:hover::after{
       opacity: 0.25;
       border-radius: 10px;
       border-style: groove;
-      border-color: blueviolet;
+      border-color: rgb(255, 3, 234);
+      border-width: 8px;
 }
 
 .header-text h1{
@@ -385,7 +386,6 @@ flex-wrap: wrap;
     font-size: 30px;
     padding-right: 15px;
     display: inline-block;
-    color: #7f2f78;
     color: rgb(255, 3, 234);
     transition: transform 0.5s;
 }
@@ -423,6 +423,14 @@ form input, form textarea{
     color: white;
     font-size: 16px;
     border-radius: 5px;
+}
+
+#success-msg{
+    
+    display: block;
+    margin-top: -35px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 /*----------------------------Web info----------------------------------------*/
