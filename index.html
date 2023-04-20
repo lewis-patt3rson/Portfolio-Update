@@ -7,6 +7,7 @@
     <title>My Portfolio - Lewis Patterson</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/bb5073b014.js" crossorigin="anonymous"></script>
+    <script type="text/javaScript" src="index_effects.js"></script>
 </head>
 <body>
     <div id="header">
@@ -23,8 +24,12 @@
                 </ul>
                 <i class="fa-solid fa-bars menu" onclick="openmenu()" style="color: #ff0080;"></i>
             </nav>
-            <div class="header-text">
+            <div class="header-text glow">
                 <h1>Hi, I'm <span>Lewis Patterson</span><br>A graduate developer currently looking for work in the industry.</h1>
+                <svg class ="glow-box">
+                    <rect id="h" pathLength="100" stroke-linecap="round" class = "glow-blur"></rect>
+                    <rect id="h" pathLength="100" stroke-linecap="round" class = "glow-line"></rect>
+                </svg>
             </div>
         </div>
     </div>
@@ -159,37 +164,18 @@
 
 
 
+    <script>
+        var navmenu = document.getElementById("nav-menu");
 
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tab){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
+        function openmenu(){
+            navmenu.style.right = "0";
         }
-
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
+        function closemenu(){
+            navmenu.style.right = "-200px";
         }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tab).classList.add("active-tab");
-    }
-</script>
+    </script>
 
-<script>
-
-    var navmenu = document.getElementById("nav-menu");
-
-    function openmenu(){
-        navmenu.style.right = "0";
-    }
-    function closemenu(){
-        navmenu.style.right = "-200px";
-    }
-
-</script>
+    
 
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxBsUcQd-NjX_6t1nlWjfLM4nGF9Qe0w-Ovd1WqIYnXUWmurwsRPqr_WPT9aBL0_J0QPg/exec'
