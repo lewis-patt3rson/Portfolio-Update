@@ -17,7 +17,7 @@ html{
 }
 
 .container{
-    padding: 30px 10%;
+    padding: 30px 25px;
 }
 
 nav{
@@ -54,7 +54,7 @@ nav ul li{
 nav ul li a{
     color:white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     position: relative;
     padding-right: 10px;
@@ -78,9 +78,9 @@ nav ul li a:hover::after{
 
 
 .header-text{
-    margin-top: 30px;
+    margin: 30px 30px 0px 30px;
     font-size: 28px;
-    padding: 18px;
+    padding: 18px 45px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -159,6 +159,10 @@ nav ul li a:hover::after{
     font-weight: 500;
     color: white;
     margin-top: 10px;
+}
+
+.summary-details{
+    font-weight: 600;
 }
 
 .about-tabs{

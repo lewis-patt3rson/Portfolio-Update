@@ -1,6 +1,6 @@
 //Updates the about details, depending on the tab clicked by the user - Setting the tab to active, giving it the underline styling
-var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+let tablinks = document.getElementsByClassName("tab-links");
+let tabcontents = document.getElementsByClassName("tab-contents");
 
     function opentab(tab){
         for(tablink of tablinks){
@@ -13,4 +13,7 @@ var tablinks = document.getElementsByClassName("tab-links");
         event.currentTarget.classList.add("active-link");
         document.getElementById(tab).classList.add("active-tab");
     }
+
+
+
 

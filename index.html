@@ -7,18 +7,17 @@
     <title>My Portfolio - Lewis Patterson</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/bb5073b014.js" crossorigin="anonymous"></script>
-    <script type="text/javaScript" src="index_effects.js"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <a href = "#" class="logo">My Portfolio</a>
+                <a href = "index.html" class="logo">My Portfolio</a>
                 <ul id="nav-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="projects.html">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-circle-xmark menu" onclick="closemenu()"style="color: #170129;"></i>
                 </ul>
@@ -44,6 +43,12 @@
                 </div>
                 <div class="about-details">
                     <h1 class="section-heading">Quick Summary</h1>
+                    <p class = "summary-details">
+                        I'm coming to the end of my masters studies and very eager to undertake an opportunity that will allow test and encourage me to grow as a developer.
+                        <br>
+                        <br>
+                        Click on a tab to view more details
+                    </p>
                     <div class="about-tabs">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
@@ -165,21 +170,9 @@
     </div>
 
 
-
-    <script>
-        var navmenu = document.getElementById("nav-menu");
-
-        function openmenu(){
-            navmenu.style.right = "0";
-        }
-        function closemenu(){
-            navmenu.style.right = "-200px";
-        }
-    </script>
-
     
-    
-
+<script type="text/JavaScript" src="index_effects.js"></script>
+<script type="text/JavaScript" src="nav.js"></script>
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxBsUcQd-NjX_6t1nlWjfLM4nGF9Qe0w-Ovd1WqIYnXUWmurwsRPqr_WPT9aBL0_J0QPg/exec'
     const form = document.forms['submit-to-google-sheet']
