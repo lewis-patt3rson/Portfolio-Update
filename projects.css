@@ -27,14 +27,17 @@ html{
   }
 
 .wrapper{
-    max-width: 50rem;
+    max-width: 60rem;
     margin-inline: auto;
     padding-inline: 1rem;
+    border-color: red;
+    border-style: dashed;
 }
 
 img {
     max-width: 100%;
     display: block;
+   
 }
 
 .accordion{
@@ -53,6 +56,17 @@ img {
         width: 60rem;
         height: 40rem;
     }
+
+    .accordion-panel:has([aria-expanded="true"]){
+    flex-basis: clamp(15rem, 60vh, 25rem);
+    flex-grow: 1;
+    }
+
+    .accordion-content{
+        width: 100%;
+    }
+
+    
 }
 
 .accordion *{
@@ -76,6 +90,8 @@ img {
     opacity: 0;
     transition: transform .5s .25s, opacity .5s;
     margin-left: calc(var(--_button-sze) + var(--_panel-gap));
+    background-image: linear-gradient(to right,indigo,violet);
+    background: opa;
 }
 
 .accordion-title {
@@ -97,6 +113,7 @@ img {
         width: calc(100% + var(--_button-sze) *2);
         height: var(--_button-sze);
         background: rgb(38, 5, 38);
+        background-image: linear-gradient(to right,rgb(16, 3, 26),rgb(102, 14, 102));
         z-index: -1;
         border-radius: 100vw;
     }
